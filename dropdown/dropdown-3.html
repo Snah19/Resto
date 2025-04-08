@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown 3</title>
+    <style>
+        * {
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url(img/night-landscape-with-mountain-and-moonlight-vector.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            position: fixed; top: 0; right: 0; left: 0;
+            display: flex; justify-content: space-between; align-items: center;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+            padding-inline: 20px;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-weight: bolder; font-size: 25px;
+            color: #333;
+        }
+
+        header .navbar ul {
+            list-style: none;
+        }
+
+        header .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+        header .navbar ul li a {
+            display: block;
+            font-size: 20px;
+            padding: 20px;
+            color: #333;
+        }
+
+        header .navbar ul li a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        header .navbar ul li ul {
+            position: absolute;
+            width: 200px;
+            background: #fff;
+            display: none;
+        }
+
+        header .navbar ul li ul li {
+            width: 100%;
+            border-top: 1px solid #0000001a;
+        }
+
+        header .navbar ul li ul li ul {
+            top: 0; left: 200px;
+        }
+
+        header .navbar ul li:is(:hover, :focus-within) > ul {
+            display: initial;
+        }
+
+        #menu-bar {
+            display: none;
+        }
+
+        header label {
+            display: none;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            header {
+                padding: 20px;
+            }
+
+            header label {
+                display: initial;
+            }
+
+            header .navbar {
+                position: absolute; top: 100%; right: 0; left: 0;
+                display: none;
+                background: #fff;
+                border-top: 1px solid rgba(0, 0, 0, .1);
+            }
+
+            header .navbar ul li {
+                width: 100%;
+            }
+
+            header .navbar ul li ul {
+                position: relative;
+                width: 100%; 
+            }
+
+            header .navbar ul li ul li {
+                background: #eee;
+            }
+
+            header .navbar ul li ul li ul {
+                left: 0;
+                width: 100%;
+            }
+
+            #menu-bar:checked ~ .navbar {
+                display: initial;
+            }
+        }        
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a class="logo" href="#">LOGO</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="#">about</a>
+                </li>
+                <li>
+                    <a href="#">pages+</a>
+                    <ul>
+                        <li>
+                            <a href="#">blogs</a>
+                        </li>
+                        <li>
+                            <a href="#">services+</a>
+                            <ul>
+                                <li>
+                                    <a href="#">html</a>
+                                </li>
+                                <li>
+                                    <a href="#">css</a>
+                                </li>
+                                <li>
+                                    <a href="#">javascript</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">review</a>
+                </li>
+                <li>
+                    <a href="#">gallery+</a>
+                    <ul>
+                        <li>
+                            <a href="#">grid gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">flex gallery</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>

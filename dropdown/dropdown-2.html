@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #0073ff;
+            --color-white: #e9e9e9;
+            --color-black: #141d28;
+            --color-black-1: #212b38;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .menu__bar {
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%; height: 80px;
+            padding: 0 5%;
+            background-color: var(--color-black);
+        }
+
+        .logo {
+            font-size: 30px;
+            color: var(--color-white);
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .menu__bar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu__bar ul li {
+            position: relative;
+            padding: 10px 30px;
+        }
+
+        .menu__bar ul li a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 20px;
+
+            transition: all 0.3s;
+        }
+
+        .menu__bar ul li a:hover {
+            color: var(--color-primary);
+        }
+
+        .dropdown__menu {
+            display: none;
+        }
+
+        .menu__bar ul li:hover .dropdown__menu {
+            position: absolute;
+            display: block;
+            top: 100%; left: 0;
+            background-color: var(--color-black);
+        }
+
+        .menu__bar ul li:hover .dropdown__menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .menu__bar ul li:hover .dropdown__menu ul li {
+            width: 150px;
+            padding: 10px;
+        }
+
+        .fas {
+            float: right;
+            margin-left: 10px; padding-top: 3px;
+        }
+
+        .dropdown__menu-1 {
+            display: none;
+        }
+
+        .dropdown__menu ul li:hover .dropdown__menu-1 {
+            position: absolute; top: 0; left: 150px;
+            display: block;
+            background-color: var(--color-black);
+        }
+
+        .hero {
+            height: calc(100vh - 80px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu__bar">
+        <h1 class="logo">
+            Light <span>Code.</span>
+        </h1>
+
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Pages <i class="fas fa-caret-down"></i> </a>
+                <div class="dropdown__menu">
+                    <ul>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Team <i class="fas fa-caret-right"></i> </a>
+                            <div class="dropdown__menu-1">
+                                <ul>
+                                    <li>
+                                        <a href="#">Team-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Team-2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Team-3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Team-4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        &nbsp;
+    </section>
+</body>
+</html>

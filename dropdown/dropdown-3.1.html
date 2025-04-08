@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url(img/night-landscape-with-mountain-and-moonlight-vector.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .header {
+            position: fixed; top: 0; right: 0; left: 0;
+            display: flex; justify-content: space-between; align-items: center;
+            padding-inline: 20px;
+            box-shadow: 0 5px 10px #0000001a;
+            background: #fff;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px; font-weight: bolder;
+            color: #333;
+        }
+
+        .navbar-list-item {
+            position: relative;
+            float: left;
+        }
+
+        .navbar-link {
+            display: block;
+            padding: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .navbar-link:hover {
+            background: #333; color: #fff;
+        }
+
+        .navbar-list-item:is(:hover, :focus-within) > .dropdown {
+            display: initial;
+        }
+
+        .dropdown {
+            position: absolute;
+            display: none;
+            width: 200px;
+            background: #fff;
+        }
+
+        .dropdown-list-item {
+            width: 100%;
+            border-top: 1px solid #0000001a;
+        }
+
+        .dropdown-level-2 {
+            top: 0; left: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a class="logo" href="#">LOGO</a>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Home</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">About</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Pages <i class="fas fa-caret-down"></i> </a>
+                    <ul class="dropdown dropdown-level-1">
+                        <li class="navbar-list-item dropdown-list-item">
+                            <a class="navbar-link" href="#">Blogs</a>
+                        </li>
+                        <li class="navbar-list-item dropdown-list-item">
+                            <a class="navbar-link" href="#">Services <i class="fas fa-caret-right"></i> </a>
+                            <ul class="dropdown dropdown-level-2">
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">HTML</a>
+                                </li>
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">CSS</a>
+                                </li>
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">JavaScript</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Review</a>
+                </li>
+                <li class="navbar-list-item">
+                   <a class="navbar-link" href="#">Gallery <i class="fas fa-caret-down"></i> </a>
+                   <ul class="dropdown dropdown-level-1">
+                    <li class="navbar-list-item dropdown-list-item">
+                        <a class="navbar-link" href="#">Grid Gallery</a>
+                    </li>
+                    <li class="navbar-list-item dropdown-list-item">
+                        <a class="navbar-link" href="#">Flex Gallery</a>
+                    </li>
+                   </ul>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>
