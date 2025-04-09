@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown 3.2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {padding: 0; margin: 0; box-sizing: border-box;}
+        body {min-height: 100vh; font-family: Arial, Helvetica, sans-serif; background: url(img/night-landscape-with-mountain-and-moonlight-vector.jpg); background-size: cover; background-position: center;}
+        a {text-decoration: none; color: inherit;}
+        ul {list-style: none;}
+        .header {position: fixed; top: 0; right: 0; left: 0; display: flex; justify-content: space-between; align-items: center; padding-inline: 10%; background: #fff; box-shadow: 0 5px 10px #0000001a; z-index: 1000;}
+        .logo {font-size: 25px; font-weight: 700; color: #333;}
+        .navbar-list-item {position: relative; float: left;}
+        .navbar-link {display: block; padding: 20px; font-size: 20px; color: #333;}
+        .navbar-link:hover {background: #333; color: #fff;}
+        .dropdown-list, .dropdown-sub-list {position: absolute; display: none; width: 200px; background: #fff;}
+        .navbar-list-item:is(:hover, :focus-within) > .dropdown-list, .navbar-list-item:is(:hover, :focus-within) > .dropdown-sub-list {display: initial;}
+        .dropdown-list-item {width: 100%; border-top: 1px solid #0000001a;}
+        .dropdown-sub-list {top: 0; left: 200px;}
+
+    </style>
+</head>
+<body>
+    
+    <header class="header wrapper">
+        <a class="logo" href="#">Logo</a>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Link 1 <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-list">
+                        <li class="navbar-list-item dropdown-list-item">
+                            <a class="navbar-link" href="#">Link 1.1 <i class="fas fa-caret-right"></i></a>
+                            <ul class="dropdown-sub-list">
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">Link 1.1.1</a>
+                                </li>
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">Link 1.1.2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-list-item dropdown-list-item">
+                            <a class="navbar-link" href="#">Link 1.2 <i class="fas fa-caret-right"></i></a>
+                            <ul class="dropdown-sub-list">
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">Link 1.2.1</a>
+                                </li>
+                                <li class="navbar-list-item dropdown-list-item">
+                                    <a class="navbar-link" href="#">Link 1.2.2 <i class="fas fa-caret-right"></i></a>
+                                    <ul class="dropdown-sub-list">
+                                        <li class="navbar-list-item dropdown-list-item">
+                                            <a class="navbar-link" href="#">Link 1.2.2.1</a>
+                                        </li>
+                                        <li class="navbar-list-item dropdown-list-item">
+                                            <a class="navbar-link" href="#">Link 1.2.2.2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Link 2</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Link 3</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Link 4</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Link 5</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>

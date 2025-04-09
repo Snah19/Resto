@@ -36,47 +36,15 @@
             background: #fff;
             z-index: 1000;
         }
+        .logo {font-size: 25px; font-weight: bolder;color: #333;}
+        .navbar-list-item {position: relative;float: left;}
+        .navbar-link {display: block;padding: 20px;font-size: 20px;color: #333;}
+        .dropdown {position: absolute;display: none;width: 200px;background: #fff;}
+        .dropdown-list-item {width: 100%;border-top: 1px solid #0000001a;}
+        .dropdown-level-2 {top: 0; left: 200px;}
 
-        .logo {
-            font-size: 25px; font-weight: bolder;
-            color: #333;
-        }
-
-        .navbar-list-item {
-            position: relative;
-            float: left;
-        }
-
-        .navbar-link {
-            display: block;
-            padding: 20px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .navbar-link:hover {
-            background: #333; color: #fff;
-        }
-
-        .navbar-list-item:is(:hover, :focus-within) > .dropdown {
-            display: initial;
-        }
-
-        .dropdown {
-            position: absolute;
-            display: none;
-            width: 200px;
-            background: #fff;
-        }
-
-        .dropdown-list-item {
-            width: 100%;
-            border-top: 1px solid #0000001a;
-        }
-
-        .dropdown-level-2 {
-            top: 0; left: 200px;
-        }
+        .navbar-list-item:is(:hover, :focus-within) > .dropdown {display: initial;}
+        .navbar-link:hover {background: #333; color: #fff;}
         
     </style>
 </head>
@@ -86,12 +54,6 @@
         <a class="logo" href="#">LOGO</a>
         <nav class="navbar">
             <ul class="navbar-list">
-                <li class="navbar-list-item">
-                    <a class="navbar-link" href="#">Home</a>
-                </li>
-                <li class="navbar-list-item">
-                    <a class="navbar-link" href="#">About</a>
-                </li>
                 <li class="navbar-list-item">
                     <a class="navbar-link" href="#">Pages <i class="fas fa-caret-down"></i> </a>
                     <ul class="dropdown dropdown-level-1">
@@ -113,6 +75,12 @@
                             </ul>
                         </li>
                     </ul>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">Home</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a class="navbar-link" href="#">About</a>
                 </li>
                 <li class="navbar-list-item">
                     <a class="navbar-link" href="#">Review</a>

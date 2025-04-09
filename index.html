@@ -3,61 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <nav class="navbar-container global-wrapper">
+            <nav class="navbar">
                 <div class="navbar-left">
-                    <a class="navbar-left-menu-link" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
-                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/>
-                        </svg>
-                    </a>
-                    <ul class="navbar-left-list">
-                        <li class="navbar-left-list-item">
-                            <a class="navbar-left-link" href="#">Home</a>
-                        </li>
-                        <li class="navbar-left-list-item">
-                            <a class="navbar-left-link" href="#">About</a>
-                        </li>
-                        <li class="navbar-left-list-item">
-                            <a class="navbar-left-link" href="#">Special Dishes ▼</a>
-                            <ul class="navbar-left-dropdown">
-                                <li class="navbar-left-dropdown-item">
-                                    <a href="#">Beef Steak Sauce</a>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <ul class="navbar-list">
+                        <li class="navbar-list-item">
+                            <a href="#">Special Dishes <i class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-list">
+                                <li>
+                                    <a href="#">Beef Stake Sauce</a>
                                 </li>
-                                <li class="navbar-left-dropdown-item">
+                                <li>
                                     <a href="#">Salmon Zucchini</a>
                                 </li>
                             </ul>
                         </li>
+                        <li class="navbar-list-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="navbar-list-item">
+                            <a href="#">About</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar-middle">
-                    <a href="#">
-                        <img src="img/logo.png" width="117" height="50" alt="">
-                    </a>
+
                 </div>
                 <div class="navbar-right">
-                    <ul class="navbar-right-list">
-                        <li>
-                            <a class="navbar-right-link" href="#">Menu</a>
-                        </li>
-                        <li>
-                            <a class="navbar-right-link" href="#">Team</a>
-                        </li>
-                        <li>
-                            <a class="navbar-right-link" href="#">Reservation</a>
-                        </li>
-                    </ul>
-                    <a class="navbar-right-search-link" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
-                            <path d="M456.69,421.39,362.6,327.3a173.81,173.81,0,0,0,34.84-104.58C397.44,126.38,319.06,48,222.72,48S48,126.38,48,222.72s78.38,174.72,174.72,174.72A173.81,173.81,0,0,0,327.3,362.6l94.09,94.09a25,25,0,0,0,35.3-35.3ZM97.92,222.72a124.8,124.8,0,1,1,124.8,124.8A124.95,124.95,0,0,1,97.92,222.72Z"/>
-                        </svg>
-                    </a>
+
                 </div>
             </nav>
         </header>
